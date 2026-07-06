@@ -1,0 +1,44 @@
+# Sample order flow for the order-matching-engine.
+#
+# This file is illustrative reference data describing a realistic sequence
+# of exchange activity. main.cpp currently drives its demonstration directly
+# in code; this file documents the equivalent scenario in a simple,
+# human-readable command format that a future file-driven CLI / parser
+# (see README "Future Improvements") could consume directly.
+#
+# Format:
+#   ADD    <SIDE: BUY|SELL> <PRICE> <QUANTITY>
+#   CANCEL <ORDER_ID>
+#   MODIFY <ORDER_ID> <NEW_PRICE> <NEW_QUANTITY>
+#   SEARCH <ORDER_ID>
+#   PRINT_BOOK
+#   PRINT_TRADES
+#   PRINT_STATS
+
+ADD    BUY   99.50  15
+ADD    BUY   99.00  10
+ADD    BUY   99.50  5
+ADD    SELL  101.00 8
+ADD    SELL  102.00 12
+PRINT_BOOK
+
+ADD    SELL  100.00 3
+ADD    BUY   100.00 10
+PRINT_BOOK
+PRINT_TRADES
+
+ADD    BUY   101.50 20
+PRINT_BOOK
+PRINT_TRADES
+
+CANCEL 2
+PRINT_BOOK
+
+MODIFY 3 100.50 5
+PRINT_BOOK
+
+SEARCH 1
+SEARCH 7
+SEARCH 3
+
+PRINT_STATS
