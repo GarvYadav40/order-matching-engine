@@ -162,3 +162,21 @@ summary (total orders, cancellations, trades, volume, best bid/ask).
   at the cost of more manual memory management.
 - **Unit tests**: a dedicated test suite (e.g. Catch2 or GoogleTest) covering
   matching edge cases, partial fills, and FIFO ordering guarantees.
+
+
+  ## Demo
+
+### 1. initial Order Book
+![Initial Order Book](screenshots/initial-book.png)
+
+### 2. partial Fill
+![Partial Fill](screenshots/partial-fill.png)
+
+### 3. pricetime Priority
+![Price-Time Priority](screenshots/pricetime-priority.png)
+
+### 4. cancel-order
+![Cancel & Modify](screenshots/cancel-order.png)
+
+### 5. engine-statistics
+![Engine Statistics](screenshots/engine-statistics.png)
